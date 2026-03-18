@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/tiendavirtual?useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
+server:
+  port: 8005
+db:
+  security:
+    driver: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springsecurity
+    user: root
+    pass: root
+jwt:
+  properties:
+    timeout: 500000
+    key: 13414515135413414jojoj11jja09ujaijf890qu901u90u1390u90ruq9
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
